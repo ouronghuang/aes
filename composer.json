@@ -1,0 +1,33 @@
+{
+    "name": "orh/aes",
+    "description": "The PHP Aes encrypt and decrypt",
+    "keywords": [
+        "aes",
+        "encrypt",
+        "decrypt"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orh\\Aes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orh\\Aes\\Test\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "orh",
+            "email": "512574561@qq.com"
+        }
+    ]
+}
