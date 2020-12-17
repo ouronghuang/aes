@@ -28,10 +28,6 @@ class Aes
     /**
      * 初始化.
      *
-     * @param string $key
-     * @param string $iv
-     * @param string $method
-     *
      * @return void
      */
     public function __construct(string $key, string $iv, string $method = 'AES-256-CBC')

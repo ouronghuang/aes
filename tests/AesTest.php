@@ -7,51 +7,46 @@ use PHPUnit\Framework\TestCase;
 
 class AesTest extends TestCase
 {
-    protected $aes = null;
+    protected $key = 'D5E483D8B90C02BD4D470BA8049E1FA61D64EB2BFA444CBF9853CDFB8B24DA7A';
 
-    public function __construct($name = null, array $data = [], $dataName = '')
-    {
-        parent::__construct($name, $data, $dataName);
-
-        $key = 'D5E483D8B90C02BD4D470BA8049E1FA61D64EB2BFA444CBF9853CDFB8B24DA7A';
-        $iv = '304E9E87DB9C1C81';
-
-        $this->aes = new Aes($key, $iv);
-    }
+    protected $iv = '304E9E87DB9C1C81';
 
     public function testEncrypt()
     {
+        $aes = new Aes($this->key, $this->iv);
+
         $data = [];
+        $encrypt = $aes->encrypt($data);
 
-        $encrypt = $this->aes->encrypt($data);
-
-        $this->assertIsString($encrypt);
+        $this->assertTrue(is_string($encrypt));
     }
 
     public function testDecrypt()
     {
+        $aes = new Aes($this->key, $this->iv);
+
         $data = [];
+        $encrypt = $aes->encrypt($data);
+        $decrypt = $aes->decrypt($encrypt);
 
-        $encrypt = $this->aes->encrypt($data);
-
-        $decrypt = $this->aes->decrypt($encrypt);
-
-        $this->assertIsArray($decrypt);
+        $this->assertTrue(is_array($decrypt));
     }
 
     public function testString()
     {
+        $aes = new Aes($this->key, $this->iv);
+
         $data = 'This is need encrypt data.';
+        $encrypt = $aes->encrypt($data);
+        $decrypt = $aes->decrypt($encrypt);
 
-        $encrypt = $this->aes->encrypt($data);
-
-        $decrypt = $this->aes->decrypt($encrypt);
-
-        $this->assertEquals($data, $decrypt);
+        $this->assertSame($data, $decrypt);
     }
 
     public function testArray()
     {
+        $aes = new Aes($this->key, $this->iv);
+
         $data = [
             'this',
             'is',
@@ -59,11 +54,9 @@ class AesTest extends TestCase
             'encrypt',
             'data',
         ];
+        $encrypt = $aes->encrypt($data);
+        $decrypt = $aes->decrypt($encrypt);
 
-        $encrypt = $this->aes->encrypt($data);
-
-        $decrypt = $this->aes->decrypt($encrypt);
-
-        $this->assertEquals($data, $decrypt);
+        $this->assertSame($data, $decrypt);
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "orh/aes",
-    "description": "The PHP Aes encrypt and decrypt",
+    "description": "The PHP AES encrypt and decrypt",
     "keywords": [
         "aes",
         "encrypt",
@@ -12,7 +12,8 @@
         "php": ">=7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~8.5.0"
+        "phpunit/phpunit": "~6.5.0",
+        "friendsofphp/php-cs-fixer": "~2.17.0"
     },
     "autoload": {
         "psr-4": {
