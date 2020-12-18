@@ -11,27 +11,6 @@ class AesTest extends TestCase
 
     protected $iv = '304E9E87DB9C1C81';
 
-    public function testEncrypt()
-    {
-        $aes = new Aes($this->key, $this->iv);
-
-        $data = [];
-        $encrypt = $aes->encrypt($data);
-
-        $this->assertTrue(is_string($encrypt));
-    }
-
-    public function testDecrypt()
-    {
-        $aes = new Aes($this->key, $this->iv);
-
-        $data = [];
-        $encrypt = $aes->encrypt($data);
-        $decrypt = $aes->decrypt($encrypt);
-
-        $this->assertTrue(is_array($decrypt));
-    }
-
     public function testString()
     {
         $aes = new Aes($this->key, $this->iv);

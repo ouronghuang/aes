@@ -2,6 +2,8 @@
 
 namespace Orh\Aes;
 
+use Orh\Aes\Exceptions\InvalidArgumentException;
+
 class Aes
 {
     /**
@@ -25,11 +27,6 @@ class Aes
      */
     protected $method = '';
 
-    /**
-     * 初始化.
-     *
-     * @return void
-     */
     public function __construct(string $key, string $iv, string $method = 'AES-256-CBC')
     {
         $this->key = $key;
@@ -42,10 +39,14 @@ class Aes
      *
      * @param string|array $data
      *
-     * @return string
+     * @throws
      */
-    public function encrypt($data)
+    public function encrypt($data): string
     {
+        if (! is_string($data) && ! is_array($data)) {
+            throw new InvalidArgumentException('The encrypt data must be a string or an array.');
+        }
+
         if (is_array($data)) {
             $data = json_encode($data);
         }
@@ -56,11 +57,9 @@ class Aes
     /**
      * 解密.
      *
-     * @param string $data
-     *
      * @return string|array
      */
-    public function decrypt($data)
+    public function decrypt(string $data)
     {
         $data = openssl_decrypt(base64_decode($data), $this->method, $this->key, OPENSSL_RAW_DATA, $this->iv);
 

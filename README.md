@@ -31,10 +31,13 @@ use Orh\Aes\Aes;
 $key = '';
 $iv = '';
 
+// 默认加密方式
+$method = 'AES-256-CBC';
+
 $data = '';
 // $data = [];
 
-$aes = new Aes($key, $iv);
+$aes = new Aes($key, $iv, $method);
 
 $encrypt = $aes->encrypt($data);
 $decrypt = $aes->decrypt($encrypt);
