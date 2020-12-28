@@ -1,20 +1,23 @@
 <h1 align="center">
-    The PHP AES encrypt and decrypt
+  The PHP AES encrypt and decrypt
 </h1>
 
 <p align="center">
-    <a href="https://packagist.org/packages/orh/aes">
-        <img alt="Packagist PHP Version Support" src="https://img.shields.io/packagist/php-v/orh/aes">
-    </a>
-    <a href="https://packagist.org/packages/orh/aes">
-        <img alt="Packagist Version" src="https://img.shields.io/packagist/v/orh/aes?color=df8057">
-    </a>
-    <a href="https://packagist.org/packages/orh/aes">
-        <img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/orh/aes">
-    </a>
-    <a href="https://github.com/ouronghuang/aes">
-        <img alt="GitHub" src="https://img.shields.io/github/license/ouronghuang/aes">
-    </a>
+  <a href="https://packagist.org/packages/orh/aes">
+    <img alt="Packagist PHP Version Support" src="https://img.shields.io/packagist/php-v/orh/aes">
+  </a>
+  <a href="https://packagist.org/packages/orh/aes">
+    <img alt="Packagist Version" src="https://img.shields.io/packagist/v/orh/aes?color=df8057">
+  </a>
+  <a href="https://packagist.org/packages/orh/aes">
+    <img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/orh/aes">
+  </a>
+  <a href="https://github.com/ouronghuang/aes">
+    <img alt="StyleCI build status" src="https://github.styleci.io/repos/321933081/shield?style=flat">
+  </a>
+  <a href="https://github.com/ouronghuang/aes">
+    <img alt="GitHub" src="https://img.shields.io/github/license/ouronghuang/aes">
+  </a>
 </p>
 
 ## 安装
