@@ -16,7 +16,7 @@
     <img alt="StyleCI build status" src="https://github.styleci.io/repos/321933081/shield?style=flat">
   </a>
   <a href="https://github.com/ouronghuang/aes">
-    <img alt="GitHub" src="https://img.shields.io/github/license/ouronghuang/aes">
+    <img alt="GitHub" src="https://travis-ci.org/ouronghuang/aes.svg?branch=master">
   </a>
 </p>
 
