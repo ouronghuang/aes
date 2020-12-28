@@ -13,10 +13,10 @@
     <img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/orh/aes">
   </a>
   <a href="https://github.com/ouronghuang/aes">
-    <img alt="StyleCI build status" src="https://github.styleci.io/repos/321933081/shield?style=flat">
+    <img alt="StyleCI Build Status" src="https://github.styleci.io/repos/321933081/shield?style=flat">
   </a>
   <a href="https://github.com/ouronghuang/aes">
-    <img alt="GitHub" src="https://travis-ci.org/ouronghuang/aes.svg?branch=master">
+    <img alt="Build Status" src="https://travis-ci.org/ouronghuang/aes.svg?branch=master">
   </a>
 </p>
 
